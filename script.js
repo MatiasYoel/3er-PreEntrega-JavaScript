@@ -106,10 +106,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 maquinas.forEach((producto) =>{
     const {id, nombre, precio, descripcion, stock, img} = producto
     contenedor.innerHTML += `
-    <div class="card row text-center" style="width: 18rem;">
+    <div class="card contenido-card row text-center" style="width: 18rem;">
         <img src=${img} class="card-img-top mt-5 " alt="...">
         <div class="card-body col-12">
-            <h5 class="card-title">${nombre}</h5>
+            <h5 class="card-title title-cards">${nombre}</h5>
             <p class="card-text">Precio: $${precio}</p>
             <p class="card-text">Disponible: ${stock}</p>
             <button onclick="agregarProducto(${id})" class="btn btn-primary">Agregar al Carrito</button>
@@ -174,16 +174,13 @@ const productoEnCarrito = () => {
         const {id, nombre, precio, descripcion, stock, img,cantidad } = producto
         modalBody.innerHTML += `
         <div class="modal-contenedor">
-        <div>
-            <img class="img-fluid img-carrito" src="${img}"
-        </div>
-        <div>
-        
-        </div>
-        <p>Producto: ${nombre}</p>
-        <p>Precio: $${precio}</p>
-        <p>Cantidad: ${cantidad}</p>
-        <button onclick="eliminarProducto(${id})" class="btn btn-danger">Eliminar Producto</button>
+            <div>
+                <img class="img-fluid img-carrito" src="${img}"
+            </div>
+            <p>Producto: ${nombre}</p>
+            <p>Precio: $${precio}</p>
+            <p>Cantidad: ${cantidad}</p>
+            <button onclick="eliminarProducto(${id})" class="btn btn-danger">Eliminar Producto</button>
         </div>
         `
     }
