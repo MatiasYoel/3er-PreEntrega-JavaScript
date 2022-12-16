@@ -1,3 +1,8 @@
+nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between; }
 .imagen{
     max-width:100%;
 }
@@ -12,11 +17,17 @@ body{
     background-color: #E3D8D6;
     overflow-x: hidden;
 }
-.modal-contenedor{
-    display:flex;
-    align-items: center;
-    gap:2rem;
+input{
+    width: 50vw;
+    padding: 10px;
+    outline: none;
+    border: 5px solid #CCD1E4;
+    font-weight: 600;
 }
+.filtro{
+    display: none;
+}
+
 .img-carrito{
     width:200px;
     padding:20px;
@@ -68,7 +79,7 @@ a{
 	margin: 20px;
 	border-radius: 6px;
 	overflow: hidden;
-	background:#fff;
+	background:rgb(255, 255, 255);
 	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
 	transition: all 400ms ease-out;
 	cursor: default;
@@ -87,12 +98,14 @@ a{
 }
 .card  h5{
 	margin-bottom: 1px;
-	color: #7a7a7a;
+	font-weight: 1000;
+	color: #3b3434;
 }
 .card p{
 	line-height: 1.8;
 	color: #000000;
 	font-size: 14px;
+	font-weight: 600;
 	margin-bottom: 1px;
 }
 .card button{
@@ -100,6 +113,7 @@ a{
 	padding: 8px;
 	margin-top: 10px;
 	text-decoration: none;
+	font-weight: 600;
 	color: #ffffff;
 	border-radius: 50px;
 	transition: all 400ms ease;
@@ -116,4 +130,68 @@ a{
 	.card{
 		margin: 15px;
 	}
+}
+.menu{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+footer{
+	background-color: black;
+	text-align: center;
+	color: white;
+	display: flex;
+}
+
+footer div p{
+	font-size: 1.5r;	
+}
+div img{
+	height: 50px;
+}
+section img{
+	height: 150px;
+}
+.bienvenida--subFooter{
+    color: white;
+    font-family:'Montserrat', sans-serif;
+    font-size: 6fr;
+    font-weight: 500;
+    line-height: 1.2em;
+    font-size: 2.3fr;
+    line-height: 1.7em;
+}
+
+.producto{
+	font-weight: 700;
+}
+.boton{
+	font-weight: 300;
+}
+.botonProducto{
+	background-color: #000000;
+    font-family:'Montserrat', sans-serif;
+    font-size: 2fr;
+    font-weight: 200;
+    line-height: 1.2em;
+    line-height: 1.7em;
+}
+#contenedorProductos{
+    display:flex;
+	justify-content: space-around;
+    align-items: center;
+}
+.itemCarrito{
+	background-color:#5B6F80;
+	display: flex;
+	justify-content: space-around;
+}
+.productoCarrito{
+	color: white;
+    font-family:'Montserrat', sans-serif;
+    font-size: 6fr;
+    font-weight: 500;
+    line-height: 1.2em;
+    font-size: 2.3fr;
+    line-height: 1.7em;
 }
